@@ -1,6 +1,6 @@
 from ipykernel.kernelbase import Kernel
 import tkinter
-__version__ = '0.1'
+__version__ = '0.0.1'
 
 class TclKernel(Kernel):
     implementation = 'tcl_kernel'
