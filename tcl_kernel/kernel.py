@@ -14,7 +14,7 @@ class TclKernel(Kernel):
         Kernel.__init__(self, **kwargs)
         try:
             self.tcl = tkinter.Tcl()
-        
+
     def do_execute(self, code, silent, store_history=True,
                    user_expressions=None, allow_stdin=False):
         
