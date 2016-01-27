@@ -1,0 +1,1 @@
+{"argv":["python", "-m", "tcl_kernel", "-f". "{connection_file}", "display_name":"Tcl"]}
