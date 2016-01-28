@@ -5,6 +5,16 @@ except ImportError:
     import tkinter as Tkinter
 __version__ = '0.0.1'
 
+PUTS_REDEF = """\
+rename puts original_puts
+proc puts {args} {
+    if {[llength $args] == 1} {
+        return "=> [lindex $args 0]"
+    } else {
+        eval original_puts $args
+    }
+}
+"""
 
 class TclKernel(Kernel):
     implementation = 'tcl_kernel'
@@ -19,8 +29,7 @@ class TclKernel(Kernel):
         Kernel.__init__(self, **kwargs)
         self.tcl = Tkinter.Tcl()
         self.execution_count = 0
-        putsredef = 'rename puts original_puts \nproc puts {args} {\n    if {[llength $args] == 1} {\n        return "=> [lindex $args 0]"\n    } else {\n        eval original_puts $args\n    }\n}\n'
-        self.tcl.eval(putsredef)
+        self.tcl.eval(PUTS_REDEF)
 
     def do_execute(self, code, silent, store_history=True,
                    user_expressions=None, allow_stdin=False):
