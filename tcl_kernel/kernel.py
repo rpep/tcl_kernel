@@ -33,7 +33,7 @@ class TclKernel(Kernel):
             output = "Tcl Error: " + scripterr.args[0]
             if not silent:
                 stream_content = {
-                    'name': 'stderr', 'text': "Tcl Error: " + output}
+                    'name': 'stderr', 'text': output}
                 self.send_response(self.iopub_socket, 'stream', stream_content)
 
         return {'status': 'ok', 'execution_count': self.execution_count,
