@@ -1,4 +1,5 @@
 from ipykernel.kernelbase import Kernel
+import textwrap
 try:
     import Tkinter
 except ImportError:
@@ -19,7 +20,15 @@ class TclKernel(Kernel):
         Kernel.__init__(self, **kwargs)
         self.tcl = Tkinter.Tcl()
         self.execution_count = 0
-        putsredef = 'rename puts original_puts \nproc puts {args} {\n    if {[llength $args] == 1} {\n        return "=> [lindex $args 0]"\n    } else {\n        eval original_puts $args\n    }\n}\n'
+        putsredef = textwrap.dedent("""\
+                  rename puts original_puts 
+                  proc puts {args} {
+                      if {[llength $args] == 1} {
+                          return "=> [lindex $args 0]"
+                      } else {
+                          eval original_puts $args
+                      }
+                  }""")
         self.tcl.eval(putsredef)
 
     def do_execute(self, code, silent, store_history=True,
