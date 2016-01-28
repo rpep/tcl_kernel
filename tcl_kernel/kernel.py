@@ -21,11 +21,14 @@ class TclKernel(Kernel):
                    user_expressions=None, allow_stdin=False):
         try:
             output = self.tcl.eval(code.rstrip())
+            if not silent:
+                stream_content = {'name': 'stdout', 'text': output}
+                self.send_response(self.iopub_socket, 'stream', stream_content)
         except Tkinter.TclError as scripterr:
             output = "Tcl Error: " + scripterr.args[0]
-        if not silent:
-            stream_content = {'name': 'stdout', 'text': output}
-            self.send_response(self.iopub_socket, 'stream', stream_content)
+	    if not silent:
+                stream_content = {'name': 'stderr', 'text': "Tcl Error: " + output}
+            	self.send_response(self.iopub_socket, 'stream', stream_content)
 
         return {'status': 'ok', 'execution_count': self.execution_count,
                     'payload': [], 'user_expressions': {}}
