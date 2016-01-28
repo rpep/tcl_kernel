@@ -9,8 +9,8 @@ __version__ = '0.0.1'
 class TclKernel(Kernel):
     implementation = 'tcl_kernel'
     implementation_version = __version__
-    language_info = {'name': 'bash',
-                     'codemirror_mode': 'shell',
+    language_info = {'name': 'Tcl',
+                     'codemirror_mode': 'Tcl',
                      'mimetype': 'text/x-script.tcl',
                      'file_extension': '.tcl'}
     banner = "Tcl Kernel"
