@@ -1,4 +1,6 @@
+========================
 A Jupyter Kernel for Tcl
+========================
 
 This uses the version of Tcl that comes with Python, through Tkinter, so you do not need to install anything else.
 
