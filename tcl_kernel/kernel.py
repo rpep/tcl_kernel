@@ -5,6 +5,8 @@ import sys
 import tempfile
 import platform
 import ctypes
+from subprocess import Popen, PIPE
+
 OS = platform.platform()
 libc = ctypes.CDLL(None)
 if 'Darwin' in OS:
@@ -60,11 +62,12 @@ def stdout_redirector(stream):
 
 
 class TclKernel(Kernel):
+
     implementation = 'tcl_kernel'
     implementation_version = __version__
     language_info = {'name': 'Tcl',
                      'codemirror_mode': 'Tcl',
-                     'mimetype': 'text/x-script.tcl',
+                     'mimetype': 'text/x-tcl',
                      'file_extension': '.tcl'}
     banner = "Tcl Kernel"
 
@@ -79,14 +82,14 @@ class TclKernel(Kernel):
         temp_stdout_stream = io.BytesIO()
         with stdout_redirector(temp_stdout_stream):
             try:
-                self.tcl.eval(code)
+                last = self.tcl.eval(code)
             except Tkinter.TclError as scripterr:
                 stderr_output = "Tcl Error: " + scripterr.args[0]
         output = temp_stdout_stream.getvalue()
         temp_stdout_stream.close()
 
         if not silent:
-            stream_content = {'name': 'stdout', 'text': output.decode('utf-8')}
+            stream_content = {'name': 'stdout', 'text': output.decode('utf-8') + last}
             self.send_response(self.iopub_socket, 'stream', stream_content)
             if stderr_output:
                 stream_content = {
