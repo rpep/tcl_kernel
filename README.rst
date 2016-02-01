@@ -15,5 +15,5 @@ Not packaged up to pip yet, so to test out, clone the repository:
 For details of how this works, see the Jupyter docs on `wrapper kernels
 <http://jupyter-client.readthedocs.org/en/latest/wrapperkernels.html>`_, and
 
-Huge thanks to Thomas Kluyver (@takluyver) who's `Jupyter bash kernel <https://github.com/takluyver/bash_kernel>` I 
+Huge thanks to Thomas Kluyver (@takluyver) who's `Jupyter bash kernel <https://github.com/takluyver/bash_kernel>`_ I 
 made heavy use of to get this working.
