@@ -80,6 +80,7 @@ class TclKernel(Kernel):
                    user_expressions=None, allow_stdin=False):
         stderr_output = None
         temp_stdout_stream = io.BytesIO()
+        last = ''
         with stdout_redirector(temp_stdout_stream):
             try:
                 last = self.tcl.eval(code)
