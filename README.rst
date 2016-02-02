@@ -4,13 +4,13 @@ A Jupyter Kernel for Tcl
 
 This uses the version of Tcl that comes with Python, through Tkinter, so you do not need to install anything else.
 
-Not packaged up to pip yet, so to test out, clone the repository:
-::
+Not packaged up to pip yet, so to test out, clone the repository::
+
     pip3 install tcl_kernel
     python3 -m tcl_kernel.install
     
-To use try one of these:
-:: 
+To use try one of these::
+
     jupyter notebook
     # Then select the Tcl option in the 'New' section
     jupyter qtconsole --kernel tcl
@@ -23,4 +23,3 @@ For details of how this works, see the Jupyter docs on `wrapper kernels
 Huge thanks to Thomas Kluyver (@takluyver) who's `Jupyter bash kernel <https://github.com/takluyver/bash_kernel>`_ I 
 made heavy use of to get this working. Also to Eli Bendersky whose code in the blogpost
 `Redirecting all kinds of stdout in Python <http://eli.thegreenplace.net/2015/redirecting-all-kinds-of-stdout-in-python/>`_ was very useful for this.
-
