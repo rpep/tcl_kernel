@@ -6,10 +6,15 @@ This uses the version of Tcl that comes with Python, through Tkinter, so you do 
 
 Not packaged up to pip yet, so to test out, clone the repository:
 ::
-    git clone https://github.com/ryanpepper/tcl_kernel.git
-    jupyter kernelspec install tcl_kernel
-    cd tcl_kernel
-    jupyter console --kernel tcl_kernel
+    pip3 install tcl_kernel
+    python3 -m tcl_kernel.install
+    
+To use try one of these:
+:: 
+    jupyter notebook
+    # Then select the Tcl option in the 'New' section
+    jupyter qtconsole --kernel tcl
+    jupyter console --kernel tcl
 
 
 For details of how this works, see the Jupyter docs on `wrapper kernels
