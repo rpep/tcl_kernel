@@ -5,11 +5,12 @@ import sys
 from jupyter_client.kernelspec import install_kernel_spec
 from IPython.utils.tempdir import TemporaryDirectory
 
-kernel_json = {"argv": [sys.executable, "-m", "tcl_kernel", "-f", "{connection_file}"],
-    "display_name": o"Tcl",
+kernel_json = {
+    "argv": [sys.executable, "-m", "tcl_kernel", "-f", "{connection_file}"],
+    "display_name": "Tcl",
     "language": "Tcl",
     "codemirror_mode": {
-        "version": 2, 
+        "version": 2,
         "name": "text/x-tcl"
     },
     "mimetype":"text/x-tcl",
