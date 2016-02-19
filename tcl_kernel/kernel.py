@@ -23,7 +23,7 @@ try:
     import Tkinter
 except ImportError:
     import tkinter as Tkinter
-__version__ = '0.0.2'
+__version__ = '0.0.4'
 
 
 @contextmanager
