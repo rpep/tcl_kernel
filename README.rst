@@ -18,10 +18,7 @@ To use try one of these::
 
 
 For details of how this works, see the Jupyter docs on `wrapper kernels
-<http://jupyter-client.readthedocs.org/en/latest/wrapperkernels.html>`_, and
+<http://jupyter-client.readthedocs.org/en/latest/wrapperkernels.html>`_.
+Copyright 2015-2016 Ryan Pepper, Thomas Kluyver, Hans Fangohr, University of Southampton.
 
-.. include:: <isonum.txt>
-
-Copyright |copy| 2015-2016 by Ryan Pepper, Thomas Kluyver, Hans Fangohr, University of Southampton.
-
-This work was supported by an EPSRC Doctoral Training Centre grant (EP/L015382/1).
+This wort was supported by an EPSRC Doctoral Training Centre grant (EP/L015382/1).
