@@ -4,13 +4,12 @@ A Jupyter Kernel for Tcl
 
 This uses the version of Tcl that comes with Python, through Tkinter, so you do not need to install anything else.
 
-Not packaged up to pip yet, so to test out, clone the repository::
+Install via:
 
     pip3 install tcl_kernel
     python3 -m tcl_kernel.install
     
 To use try one of these::
-
     jupyter notebook
     # Then select the Tcl option in the 'New' section
     jupyter qtconsole --kernel tcl
