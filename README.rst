@@ -7,6 +7,7 @@ This uses the version of Tcl that comes with Python, through Tkinter, so you do 
 Install via:
 
     pip3 install tcl_kernel
+    
     python3 -m tcl_kernel.install
     
 To use try one of these::
