@@ -11,10 +11,10 @@ Install via:
     python3 -m tcl_kernel.install
     
 To use try one of these::
-    jupyter notebook
-    # Then select the Tcl option in the 'New' section
-    jupyter qtconsole --kernel tcl
-    jupyter console --kernel tcl
+    - jupyter notebook
+        - Then select the Tcl option in the 'New' section
+    - jupyter qtconsole --kernel tcl
+    - jupyter console --kernel tcl
 
 
 For details of how this works, see the Jupyter docs on `wrapper kernels
