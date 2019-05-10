@@ -4,6 +4,8 @@ A Jupyter Kernel for Tcl
 
 This uses the version of Tcl that comes with Python, through Tkinter, so you do not need to install anything else.
 
+Note: Requires Python 3!
+
 Install via:
 
     pip3 install tcl_kernel
@@ -22,3 +24,5 @@ For details of how this works, see the Jupyter docs on `wrapper kernels
 Copyright 2015-2016 Ryan Pepper, Thomas Kluyver, Hans Fangohr, University of Southampton.
 
 This work was supported by an EPSRC Doctoral Training Centre grant (EP/L015382/1).
+
+I do not have time to add functionality to this project anymore but will happily review and merge pull requests to add new features/fix bugs.
