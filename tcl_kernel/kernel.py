@@ -10,6 +10,8 @@ OS = platform.platform()
 libc = ctypes.CDLL(None)
 if 'Darwin' in OS:
     c_stdout = ctypes.c_void_p.in_dll(libc, '__stdoutp')
+elif 'macOS' in OS:
+    c_stdout = ctypes.c_void_p.in_dll(libc, '__stdoutp')
 elif 'Linux' in OS:
     c_stdout = ctypes.c_void_p.in_dll(libc, 'stdout')
 
