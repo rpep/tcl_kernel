@@ -19,8 +19,7 @@ To use try one of these:
     - jupyter qtconsole --kernel tcl
     - jupyter console --kernel tcl
 
-For details of how this works, see the Jupyter docs on `wrapper kernels
-<http://jupyter-client.readthedocs.org/en/latest/wrapperkernels.html>`_.
-Copyright 2015-2021 Ryan Pepper, Thomas Kluyver, Hans Fangohr, University of Southampton.
+For details of how this works, see the Jupyter docs on [wrapper kernels](http://jupyter-client.readthedocs.org/en/latest/wrapperkernels.html)
 
-This work was supported by an EPSRC Doctoral Training Centre grant (EP/L015382/1)
+
+Copyright 2015-2021 Ryan Pepper, Thomas Kluyver, Hans Fangohr, University of Southampton. This work was supported by an EPSRC Doctoral Training Centre grant (EP/L015382/1)
