@@ -4,6 +4,8 @@
 ![PyPi](https://img.shields.io/pypi/v/tcl_kernel)
 ![Python Version 3](https://img.shields.io/pypi/pyversions/tcl_kernel)
 
+Note: Due to long ago moving on to other things, this is no longer maintained.
+
 This uses the version of Tcl that is used within Python, through Tkinter, so you do not need to install anything else.
 
 Install via:
